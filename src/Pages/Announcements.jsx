@@ -9,7 +9,7 @@ const AnnouncementsSection = () => {
   const fetchAnnouncements = async () => {
     try {
       setLoading(true);
-      const response = await fetch('http://localhost:8000/announcements');
+      const response = await fetch(`${import.meta.env.VITE_BACK_ROUTE}/announcements`);
       
       if (!response.ok) {
         throw new Error('Failed to fetch announcements');

@@ -19,7 +19,7 @@ export default function ContactForm() {
 
   const fetchContacts = async () => {
     try {
-      const response = await fetch("http://localhost:8000/contactUs");
+      const response = await fetch(`${import.meta.env.VITE_BACK_ROUTE}/contactUs`);
       const data = await response.json();
       if (data.success) {
         setContacts(data.contacts);

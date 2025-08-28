@@ -12,7 +12,7 @@ const OurTeam = () => {
     // Fetch members from API
     const fetchMembers = async () => {
       try {
-        const response = await fetch('http://localhost:8000/member');
+        const response = await fetch(`${import.meta.env.VITE_BACK_ROUTE}/member`);
         if (!response.ok) {
           throw new Error('Failed to fetch members');
         }

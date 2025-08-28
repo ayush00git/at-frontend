@@ -109,7 +109,7 @@ const NewMemberForm = () => {
       formDataToSend.append('linkedInURL', formData.linkedInURL);
       formDataToSend.append('profileImageURL', formData.profileImageURL);
 
-      const response = await fetch(`http://localhost:8000/member/admin_only/newMember/${import.meta.env.VITE_ROUTE_SECRET}`, {
+      const response = await fetch(`${import.meta.env.VITE_BACK_ROUTE}/member/admin_only/newMember/${import.meta.env.VITE_ROUTE_SECRET}`, {
         method: 'POST',
         body: formDataToSend,
       });
